@@ -18,10 +18,10 @@ public class ZooKoalaValidation {
         if(existence){
             if(!koalas.containsKey(id)){
                 throw new ZooException("Record is not valid: " + id, HttpStatus.NOT_FOUND);
-            } else {
-                if(koalas.containsKey(id))
-                    throw new ZooException("Record is already exist: " + id, HttpStatus.BAD_REQUEST);
             }
+        }else {
+            if(koalas.containsKey(id))
+                throw new ZooException("Record is already exist: " + id, HttpStatus.BAD_REQUEST);
         }
     }
 

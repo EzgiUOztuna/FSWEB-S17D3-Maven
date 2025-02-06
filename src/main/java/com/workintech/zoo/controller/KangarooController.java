@@ -4,12 +4,12 @@ import com.workintech.zoo.entity.Kangaroo;
 import jakarta.annotation.PostConstruct;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.Struct;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import com.workintech.zoo.validations.ZooKangarooValidation;
 
+@RestController
 @RequestMapping("/kangaroos")
 public class KangarooController {
     public Map<Integer, Kangaroo> kangaroos;
